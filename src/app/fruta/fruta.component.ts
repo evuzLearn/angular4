@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./fruta.component.scss']
 })
 export class FrutaComponent {
-  public nombre_componente = 'Componente de fruta';
-  public listado_fruta = 'Naranja, Manzana, Pera y Sandía';
+  nombre_componente = 'Componente de fruta';
+  listado_fruta = 'Naranja, Manzana, Pera y Sandía';
+
+  nombre:string = 'Jesús';
+  edad:number = 12;
+  mayorDeEdad:boolean = false;
+  trabajos:Array<any> = ['Carpintero', 'Albañil', 24];
 }
