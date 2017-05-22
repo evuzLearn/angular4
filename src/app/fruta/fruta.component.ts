@@ -16,9 +16,24 @@ export class FrutaComponent implements OnInit {
 
   ngOnInit() {
     this.helloWorld('Jesús');
+
+    // Variables y alcance
+    var uno = 8;
+    var dos = 15;
+
+    if (uno === 8) {
+      let uno = 3;
+      var dos = 88;
+
+      console.log('If uno: ' + uno);
+      console.log('If dos: ' + dos);
+    }
+
+    console.log(uno);
+    console.log(dos);
   }
 
   helloWorld(nombre) {
-    alert('Hello World! ' + nombre);
+    console.log('Hello World! ' + nombre);
   }
 }
