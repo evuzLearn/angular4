@@ -24,6 +24,8 @@
   </ul>
 </div>
 
+<hr>
+
 <h3>Listado de empleados</h3>
 <ul>
   <li *ngFor="let empleado of trabajadores; let i = index">
@@ -36,4 +38,13 @@
       <li *ngIf="!empleado.contratado">No está contratado</li>
     </ul>
   </li>
+</ul>
+
+<hr>
+
+<h3>Colores Switch</h3>
+<ul [ngSwitch]="color" [ngStyle]="{'color': color}">
+  <li *ngSwitchCase="'red'">Es de color rojo</li>
+  <li *ngSwitchCase="'blue'">Es de color azul</li>
+  <li *ngSwitchCase="'green'">Es de color verde</li>
 </ul>
