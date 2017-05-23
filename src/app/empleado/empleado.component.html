@@ -1,8 +1,25 @@
 <h3>{{nombre}}</h3>
-<strong>Empleado strella: </strong>
-<ul>
-  <li>{{trabajadores[0].nombre}}</li>
-  <li>{{empleado.edad}}</li>
-  <li>{{trabajadores[1].cargo}}</li>
-  <li>{{empleado.contratado}}</li>
-</ul>
+<strong>Empleado estrella: </strong>
+<br/>
+<br/>
+<div *ngIf="trabajador_externo">
+  <button (click)="cambiarExterno(false)">Mostrar trabajador</button>
+  <ul>
+    <li>{{empleado.nombre}}</li>
+    <li>{{empleado.edad}}</li>
+    <li>{{empleado.cargo}}</li>
+    <li *ngIf="empleado.contratado">Está contratado</li>
+    <li *ngIf="!empleado.contratado">No está contratado</li>
+  </ul>
+</div>
+
+<div *ngIf="!trabajador_externo">
+  <button (click)="cambiarExterno(true)">Mostrar Empleado</button>
+  <ul>
+    <li>{{trabajadores[0].nombre}}</li>
+    <li>{{trabajadores[0].edad}}</li>
+    <li>{{trabajadores[0].cargo}}</li>
+    <li *ngIf="trabajadores[0].contratado">Está contratado</li>
+    <li *ngIf="!trabajadores[0].contratado">No está contratado</li>
+  </ul>
+</div>
