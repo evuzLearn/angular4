@@ -53,8 +53,11 @@
 
 <h3>Selector de colores</h3>
 <button (click)="logColorSeleccionado()">Log</button>
-<input type="text" [(ngModel)]="colorSeleccionado"/>
-<pre [style.border]="colorSeleccionado.toLowerCase() == 'red' ? '5px solid black' : '5px solid red' ">
+<input type="text" [(ngModel)]="colorSeleccionado" />
+<pre
+  [style.border]="colorSeleccionado.toLowerCase() == 'red' ? '5px solid black' : '5px solid red' "
+  [class.bordeAzul]="colorSeleccionado.toLowerCase() == 'blue'"
+>
   Color Elegido:
   {{colorSeleccionado}}
 </pre>
