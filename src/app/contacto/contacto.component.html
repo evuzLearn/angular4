@@ -3,3 +3,7 @@
 <div *ngIf="page">
   Parámetro de la URL: {{page}}
 </div>
+
+<div *ngIf="!page">
+  <button (click)="redirigir()">Ir a la página con parámetro</button>
+</div>
