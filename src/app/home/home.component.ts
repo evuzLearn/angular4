@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   public nuevaPrenda: string;
 
   public fecha;
+  public nombre = 'JesúS góMeZ belLido';
 
   constructor(
     private _ropaSrv: RopaService
