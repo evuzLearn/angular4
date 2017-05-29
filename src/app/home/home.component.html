@@ -1,5 +1,9 @@
 <h3>{{titulo}}</h3>
 <br />
+<h4>{{fecha | date:'dd/MM/yyyy'}}</h4>
+<h4>{{fecha | date:'fullDate'}}</h4>
+
+
 
 <input type="text" [(ngModel)]="nuevaPrenda"><button (click)="guardarPrenda()">Añadir prenda</button>
 <h4>Listado de prendas de ropa</h4>

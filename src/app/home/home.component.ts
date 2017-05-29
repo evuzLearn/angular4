@@ -8,12 +8,17 @@ import { RopaService } from '../services/ropa.service';
 })
 export class HomeComponent implements OnInit {
   public titulo = 'Página principal';
+
   public listadoRopa: Array<string>;
   public nuevaPrenda: string;
 
+  public fecha;
+
   constructor(
     private _ropaSrv: RopaService
-  ) { }
+  ) {
+    this.fecha = new Date(2017, 4, 25);
+  }
 
   ngOnInit() {
     this.listadoRopa = this._ropaSrv.getRopa();
