@@ -7,16 +7,18 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { HomeComponent } from './home/home.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CochesComponent } from './coches/coches.component';
+import { PlantillasComponent } from './plantillas/plantillas.component';
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'contacto', component: ContactoComponent},
-  {path: 'contacto/:page', component: ContactoComponent},
-  {path: 'empleado', component: EmpleadoComponent},
-  {path: 'fruta', component: FrutaComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'coches', component: CochesComponent},
-  {path: '**', component: HomeComponent}
+  { path: '', component: HomeComponent },
+  { path: 'coches', component: CochesComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'contacto/:page', component: ContactoComponent },
+  { path: 'empleado', component: EmpleadoComponent },
+  { path: 'fruta', component: FrutaComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'plantillas', component: PlantillasComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
