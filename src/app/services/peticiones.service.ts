@@ -6,7 +6,16 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class PeticionesService {
-  constructor(private http: Http) { }
+  public url: string;
+
+  constructor(private _http: Http) {
+    this.url = 'https://jsonplaceholder.typicode.com/posts';
+  }
+
+  getArticulos() {
+    return this._http.get(this.url)
+      .map(res => res.json());
+  }
 
   getPrueba() {
     return 'Hola mundo desde el service';

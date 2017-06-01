@@ -10,6 +10,7 @@ import { PeticionesService } from '../services/peticiones.service';
 export class CochesComponent implements OnInit{
   public coche: Coche;
   public coches: Array<Coche>;
+  public articulos: Array<object>;
 
   constructor(
     private _peticionesService: PeticionesService
@@ -22,7 +23,12 @@ export class CochesComponent implements OnInit{
   }
 
   ngOnInit() {
-    console.log(this._peticionesService.getPrueba());
+    this._peticionesService.getArticulos().subscribe(
+      result => {
+        this.articulos = result;
+      },
+      err => console.log(err)
+    );
   }
 
   onSubmit() {

@@ -31,3 +31,12 @@
   </p>
   <input type="submit" value="Guardar" [disabled]="!formCoche.form.valid">
 </form>
+
+<hr>
+<div>
+  <h3>Listado de artículos</h3>
+  <ul *ngIf="articulos">
+    <li *ngFor="let articulo of articulos">Articulo {{articulo.id}}: {{articulo.title}}</li>
+  </ul>
+  <span *ngIf="!articulos">Cargado..</span>
+</div>
