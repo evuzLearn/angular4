@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  FormGroup
+  FormGroup,
+  Validators,
+  AbstractControl,
+  FormControl
 } from '@angular/forms';
 
 @Component({
@@ -11,10 +14,13 @@ import {
 })
 export class SkuFormBuilderComponent implements OnInit {
   public myForm: FormGroup;
+  public sku: AbstractControl;
+
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      sku: ['ABC123']
+      sku: ['', Validators.required]
     })
+    this.sku = this.myForm.controls['sku'];
   }
 
   ngOnInit() {
