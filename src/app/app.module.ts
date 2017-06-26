@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FormSkuComponent } from './form-sku/form-sku.component';
+import { SkuFormBuilderComponent } from './sku-form-builder/sku-form-builder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormSkuComponent
+    FormSkuComponent,
+    SkuFormBuilderComponent
   ],
   imports: [
     BrowserModule,
