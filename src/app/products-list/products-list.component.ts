@@ -34,9 +34,9 @@ export class ProductsListComponent {
   }
 
   isSelected(product: Product) {
-    if(!product || !this.currentProduct) {
+    if (!product || !this.currentProduct) {
       return false;
     }
-    return product.sku = this.currentProduct.sku;
+    return product.sku === this.currentProduct.sku;
   }
 }
