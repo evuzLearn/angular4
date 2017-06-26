@@ -18,7 +18,10 @@ export class SkuFormBuilderComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      sku: ['', Validators.required]
+      sku: ['', Validators.compose([
+        Validators.required,
+        skuValidator
+      ])]
     })
     this.sku = this.myForm.controls['sku'];
   }
@@ -30,4 +33,10 @@ export class SkuFormBuilderComponent implements OnInit {
     console.log('You submitted value: ', form);
   }
 
+}
+
+function skuValidator(control: FormControl): { [s: string]: boolean } {
+  if (!control.value.match(/^123/)) {
+    return {invalidSku: true};
+  }
 }
