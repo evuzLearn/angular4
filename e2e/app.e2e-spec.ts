@@ -1,6 +1,6 @@
 import { Angular4HelloWorldPage } from './app.po';
 
-describe('angular4-hello-world App', () => {
+describe('angular4-http', () => {
   let page: Angular4HelloWorldPage;
 
   beforeEach(() => {
