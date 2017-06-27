@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 
+import { youtubeSearchInjectable } from './injectables/youtube-search.injectables';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { SimpleHttpComponent } from './simple-http/simple-http.component';
     BrowserModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    youtubeSearchInjectable
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
