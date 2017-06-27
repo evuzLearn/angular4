@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 
 import { youtubeSearchInjectable } from './injectables/youtube-search.injectables';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SimpleHttpComponent
+    SimpleHttpComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
